@@ -3,7 +3,8 @@ package pcd.lab01.hello;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		
+		log("Number of processors: " + Runtime.getRuntime().availableProcessors());
+
 		MyThread myThread = new MyThread("MySimpleThread");
 		myThread.start();		
 		
