@@ -34,7 +34,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "java.pcd.lab02.check_act.TestCheckAndAct"
 }
 
 tasks.named<Test>("test") {
