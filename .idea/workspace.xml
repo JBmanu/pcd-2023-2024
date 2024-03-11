@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: build">
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/TestCheckAndAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/TestCheckAndAct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/TestLostUpdates.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/TestLostUpdates.java" afterDir="false" />
-    </list>
+    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: build" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,33 +59,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.pcd-2023-2024:app [:app:ConcurrentSortGeneral.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:ConcurrentSortTwoThreads.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:TestCSWithRawSynchBlocks.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:TestCheckAndAct.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.pcd-2023-2024:app [:app:TestLostUpdates.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;manu&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/manuelbuizo/Desktop/uni/PCD/pcd-2023-2024&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.pcd-2023-2024:app [:app:ConcurrentSortGeneral.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:ConcurrentSortTwoThreads.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:Main.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:TestCSWithLocks.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:TestCSWithRawSynchBlocks.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:TestCheckAndAct.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:TestLostUpdates.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/manuelbuizo/Desktop/uni/PCD/pcd-2023-2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.TestCheckAndAct">
+}]]></component>
+  <component name="RunManager" selected="Application.TestCSWithLocks">
     <configuration name="ConcurrentSortGeneral" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pcd.lab01.ex01.sol.ConcurrentSortGeneral" />
       <module name="pcd-2023-2024.app.main" />
@@ -106,12 +101,12 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="ConcurrentSortTwoThreads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab01.ex01.sol.ConcurrentSortTwoThreads" />
+    <configuration name="TestCSWithLocks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab03.cswithlocks.TestCSWithLocks" />
       <module name="pcd-2023-2024.app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pcd.lab01.ex01.sol.*" />
+          <option name="PATTERN" value="pcd.lab03.cswithlocks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,17 +159,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestCSWithLocks" />
         <item itemvalue="Application.TestCheckAndAct" />
         <item itemvalue="Application.TestLostUpdates" />
         <item itemvalue="Application.TestCSWithRawSynchBlocks" />
         <item itemvalue="Application.ConcurrentSortGeneral" />
-        <item itemvalue="Application.ConcurrentSortTwoThreads" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-53826d6a" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
@@ -190,7 +186,7 @@
       <workItem from="1708952065228" duration="9042000" />
       <workItem from="1709196792959" duration="15000" />
       <workItem from="1709556074796" duration="5162000" />
-      <workItem from="1710160523009" duration="5000" />
+      <workItem from="1710160523009" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start project">
       <option name="closed" value="true" />
