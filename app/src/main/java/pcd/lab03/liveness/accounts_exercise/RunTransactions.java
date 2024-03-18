@@ -1,7 +1,5 @@
 package pcd.lab03.liveness.accounts_exercise;
 
-import java.util.*;
-
 public class RunTransactions {
 
 	private static final int NUM_TRANSFER_AGENTS = 20;
