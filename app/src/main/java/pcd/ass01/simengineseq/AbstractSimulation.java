@@ -13,10 +13,10 @@ public abstract class AbstractSimulation {
 	private AbstractEnvironment env;
 	
 	/* list of the agents */
-	private List<AbstractAgent> agents;
+	private final List<AbstractAgent> agents;
 	
 	/* simulation listeners */
-	private List<SimulationListener> listeners;
+	private final List<SimulationListener> listeners;
 
 	/* logical time step */
 	private int dt;
@@ -36,9 +36,9 @@ public abstract class AbstractSimulation {
 
 
 	protected AbstractSimulation() {
-		agents = new ArrayList<AbstractAgent>();
-		listeners = new ArrayList<SimulationListener>();
-		toBeInSyncWithWallTime = false;
+        this.agents = new ArrayList<AbstractAgent>();
+        this.listeners = new ArrayList<SimulationListener>();
+        this.toBeInSyncWithWallTime = false;
 	}
 	
 	/**
@@ -54,92 +54,92 @@ public abstract class AbstractSimulation {
 	 * 
 	 * @param numSteps
 	 */
-	public void run(int numSteps) {		
+	public void run(final int numSteps) {
 
-		startWallTime = System.currentTimeMillis();
+        this.startWallTime = System.currentTimeMillis();
 
 		/* initialize the env and the agents inside */
-		int t = t0;
+		int t = this.t0;
 
-		env.init();
-		for (var a: agents) {
-			a.init(env);
+        this.env.init();
+		for (final var a: this.agents) {
+			a.init(this.env);
 		}
 
-		this.notifyReset(t, agents, env);
+		this.notifyReset(t, this.agents, this.env);
 		
 		long timePerStep = 0;
 		int nSteps = 0;
 		
 		while (nSteps < numSteps) {
 
-			currentWallTime = System.currentTimeMillis();
+            this.currentWallTime = System.currentTimeMillis();
 		
 			/* make a step */
-			
-			env.step(dt);
-			for (var agent: agents) {
-				agent.step(dt);
+
+            this.env.step(this.dt);
+			for (final var agent: this.agents) {
+				agent.step(this.dt);
 			}
-			t += dt;
-			
-			notifyNewStep(t, agents, env);
+			t += this.dt;
+
+            this.notifyNewStep(t, this.agents, this.env);
 
 			nSteps++;			
-			timePerStep += System.currentTimeMillis() - currentWallTime;
+			timePerStep += System.currentTimeMillis() - this.currentWallTime;
 			
-			if (toBeInSyncWithWallTime) {
-				syncWithWallTime();
+			if (this.toBeInSyncWithWallTime) {
+                this.syncWithWallTime();
 			}
-		}	
-		
-		endWallTime = System.currentTimeMillis();
+		}
+
+        this.endWallTime = System.currentTimeMillis();
 		this.averageTimePerStep = timePerStep / numSteps;
 		
 	}
 	
 	public long getSimulationDuration() {
-		return endWallTime - startWallTime;
+		return this.endWallTime - this.startWallTime;
 	}
 	
 	public long getAverageTimePerCycle() {
-		return averageTimePerStep;
+		return this.averageTimePerStep;
 	}
 	
 	/* methods for configuring the simulation */
 	
-	protected void setupTimings(int t0, int dt) {
+	protected void setupTimings(final int t0, final int dt) {
 		this.dt = dt;
 		this.t0 = t0;
 	}
 	
-	protected void syncWithTime(int nCyclesPerSec) {
+	protected void syncWithTime(final int nCyclesPerSec) {
 		this.toBeInSyncWithWallTime = true;
 		this.nStepsPerSec = nCyclesPerSec;
 	}
 		
-	protected void setupEnvironment(AbstractEnvironment env) {
+	protected void setupEnvironment(final AbstractEnvironment env) {
 		this.env = env;
 	}
 
-	protected void addAgent(AbstractAgent agent) {
-		agents.add(agent);
+	protected void addAgent(final AbstractAgent agent) {
+        this.agents.add(agent);
 	}
 	
 	/* methods for listeners */
 	
-	public void addSimulationListener(SimulationListener l) {
+	public void addSimulationListener(final SimulationListener l) {
 		this.listeners.add(l);
 	}
 	
-	private void notifyReset(int t0, List<AbstractAgent> agents, AbstractEnvironment env) {
-		for (var l: listeners) {
+	private void notifyReset(final int t0, final List<AbstractAgent> agents, final AbstractEnvironment env) {
+		for (final var l: this.listeners) {
 			l.notifyInit(t0, agents, env);
 		}
 	}
 
-	private void notifyNewStep(int t, List<AbstractAgent> agents, AbstractEnvironment env) {
-		for (var l: listeners) {
+	private void notifyNewStep(final int t, final List<AbstractAgent> agents, final AbstractEnvironment env) {
+		for (final var l: this.listeners) {
 			l.notifyStepDone(t, agents, env);
 		}
 	}
@@ -148,12 +148,12 @@ public abstract class AbstractSimulation {
 	
 	private void syncWithWallTime() {
 		try {
-			long newWallTime = System.currentTimeMillis();
-			long delay = 1000 / this.nStepsPerSec;
-			long wallTimeDT = newWallTime - currentWallTime;
+			final long newWallTime = System.currentTimeMillis();
+			final long delay = 1000 / this.nStepsPerSec;
+			final long wallTimeDT = newWallTime - this.currentWallTime;
 			if (wallTimeDT < delay) {
 				Thread.sleep(delay - wallTimeDT);
 			}
-		} catch (Exception ex) {}		
+		} catch (final Exception ex) {}
 	}
 }

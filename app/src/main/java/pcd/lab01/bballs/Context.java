@@ -4,26 +4,26 @@ import java.util.*;
 
 public class Context {
 
-    private Boundary bounds;
-    private ArrayList<BallAgent> balls;
+    private final Boundary bounds;
+    private final ArrayList<BallAgent> balls;
     private int id = 0;
     
     public Context(){
-        bounds = new Boundary(-1.0,-1.0,1.0,1.0);
-        balls = new ArrayList<BallAgent>();
+        this.bounds = new Boundary(-1.0,-1.0,1.0,1.0);
+        this.balls = new ArrayList<BallAgent>();
     } 
     
     public void createNewBall(){
-    	id++;
-        BallAgent agent = new BallAgent(id, this);
-        balls.add(agent);
+        this.id++;
+        final BallAgent agent = new BallAgent(this.id, this);
+        this.balls.add(agent);
         agent.start();
     }
     
     public void removeBall(){
-        if (balls.size()>0){
-            BallAgent ball = (BallAgent)balls.get(0);
-            balls.remove(ball);
+        if (this.balls.size()>0){
+            final BallAgent ball = this.balls.get(0);
+            this.balls.remove(ball);
             ball.notifyStopped();
        	}
     }
@@ -35,14 +35,14 @@ public class Context {
      * @return
      */
     public P2d[] getPositions(){
-    	P2d[] array = new P2d[balls.size()];
+    	final P2d[] array = new P2d[this.balls.size()];
         for (int i=0; i<array.length; i++){
-            array[i] = balls.get(i).getPos();
+            array[i] = this.balls.get(i).getPos();
         }
         return array;
     }
     
     public  Boundary getBounds(){
-        return bounds;
+        return this.bounds;
     }
 }

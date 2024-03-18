@@ -4,16 +4,16 @@ import pcd.lab03.liveness.accounts_exercise.BaseAgent;
 
 public class ThreadA extends BaseAgent {
  
-	private Resource res;
+	private final Resource res;
 	
-	public ThreadA(Resource res){
+	public ThreadA(final Resource res){
 		this.res = res;
 	}
 	
 	public void run(){
 		while (true){
-			waitAbit();
-			res.rightLeft();
+            this.waitAbit();
+            this.res.rightLeft();
 		}
 	}	
 }

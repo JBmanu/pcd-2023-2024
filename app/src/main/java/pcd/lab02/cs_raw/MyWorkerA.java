@@ -2,35 +2,35 @@ package pcd.lab02.cs_raw;
 
 public class MyWorkerA extends Worker {
 	
-	private Object lock;
+	private final Object lock;
 	
-	public MyWorkerA(String name, Object lock){
+	public MyWorkerA(final String name, final Object lock){
 		super(name);
 		this.lock = lock;
 	}
 	
 	public void run(){
 		while (true){
-		  action1();	
-		  synchronized(lock){
-			  action2();	
-			  action3();	
+            this.action1();
+		  synchronized(this.lock){
+              this.action2();
+              this.action3();
 		  }
 		}
 	}
 	
 	protected void action1(){
-		println("a1");
-		wasteRandomTime(100,500);	
+        this.println("a1");
+        this.wasteRandomTime(100,500);
 	}
 	
 	protected void action2(){
-		println("a2");
-		wasteRandomTime(300,700);	
+        this.println("a2");
+        this.wasteRandomTime(300,700);
 	}
 	protected void action3(){
-		println("a3");
-		wasteRandomTime(300,700);	
+        this.println("a3");
+        this.wasteRandomTime(300,700);
 	}
 }
 

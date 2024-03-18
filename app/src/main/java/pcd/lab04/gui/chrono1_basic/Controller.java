@@ -3,26 +3,26 @@ package pcd.lab04.gui.chrono1_basic;
 public class Controller {
 
 	private static final int DELTA_TIME = 10;
-	private Flag stopFlag;
+	private final Flag stopFlag;
 	private CounterAgent agent;
-	private Counter counter;
+	private final Counter counter;
 	
-	public Controller(Counter counter) {
+	public Controller(final Counter counter) {
 		this.counter = counter;
 		this.stopFlag = new Flag();
 	}
 	
 	public void notifyStarted() {
-		agent = new CounterAgent(counter, stopFlag, DELTA_TIME);
-		agent.start();				
+        this.agent = new CounterAgent(this.counter, this.stopFlag, DELTA_TIME);
+        this.agent.start();
 	}
 	
 	public void notifyStopped() {
-		stopFlag.set();
+        this.stopFlag.set();
 	}
 
 	public void notifyReset() {
-		counter.reset();
-		stopFlag.reset();
+        this.counter.reset();
+        this.stopFlag.reset();
 	}
 }

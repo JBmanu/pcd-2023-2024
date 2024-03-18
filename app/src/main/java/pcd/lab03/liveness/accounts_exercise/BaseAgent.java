@@ -4,16 +4,16 @@ import java.util.Random;
 
 public abstract class BaseAgent extends Thread {
  
-	private Random gen;
+	private final Random gen;
 	
 	public BaseAgent(){
-		gen = new Random();
+        this.gen = new Random();
 	}
 	
 	protected void waitAbit() {
 		try {
-			Thread.sleep(gen.nextInt(200));
-		} catch (Exception ex){}
+			Thread.sleep(this.gen.nextInt(200));
+		} catch (final Exception ex){}
 	}
 
 }

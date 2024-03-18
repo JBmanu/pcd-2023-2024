@@ -27,111 +27,111 @@ public class CarAgentExtended extends CarAgent {
 	
 	private int waitingTime;
 	
-	public CarAgentExtended(String id, RoadsEnv env, Road road, 
-					double initialPos, 
-					double acc, 
-					double dec,
-					double vmax) {
+	public CarAgentExtended(final String id, final RoadsEnv env, final Road road,
+                            final double initialPos,
+                            final double acc,
+                            final double dec,
+                            final double vmax) {
 		super(id, env, road, initialPos, acc, dec, vmax);
-		state = CarAgentState.STOPPED;
+        this.state = CarAgentState.STOPPED;
 	}
 	
 	
 	@Override
-	public void decide(int dt) {
-		switch (state) {
+	public void decide(final int dt) {
+		switch (this.state) {
 		case CarAgentState.STOPPED:
-			if (!detectedNearCar()) {
-				state = CarAgentState.ACCELERATING;
+			if (!this.detectedNearCar()) {
+                this.state = CarAgentState.ACCELERATING;
 			}
 			break;
 		case CarAgentState.ACCELERATING:
-			if (detectedNearCar()) {
-				state = CarAgentState.DECELERATING_BECAUSE_OF_A_CAR;
-			} else if (detectedRedOrOrgangeSemNear()) {
-				state = CarAgentState.DECELERATING_BECAUSE_OF_A_NOT_GREEN_SEM;
+			if (this.detectedNearCar()) {
+                this.state = CarAgentState.DECELERATING_BECAUSE_OF_A_CAR;
+			} else if (this.detectedRedOrOrgangeSemNear()) {
+                this.state = CarAgentState.DECELERATING_BECAUSE_OF_A_NOT_GREEN_SEM;
 			} else {
-				this.currentSpeed += acceleration * dt;
-				if (currentSpeed >= maxSpeed) {
-					state = CarAgentState.MOVING_CONSTANT_SPEED;
+				this.currentSpeed += this.acceleration * dt;
+				if (this.currentSpeed >= this.maxSpeed) {
+                    this.state = CarAgentState.MOVING_CONSTANT_SPEED;
 				}			
 			}
 			break;
 		case CarAgentState.MOVING_CONSTANT_SPEED:
-			if (detectedNearCar()) {
-				state = CarAgentState.DECELERATING_BECAUSE_OF_A_CAR;
-			} else if (detectedRedOrOrgangeSemNear()) {
-				state = CarAgentState.DECELERATING_BECAUSE_OF_A_NOT_GREEN_SEM;
+			if (this.detectedNearCar()) {
+                this.state = CarAgentState.DECELERATING_BECAUSE_OF_A_CAR;
+			} else if (this.detectedRedOrOrgangeSemNear()) {
+                this.state = CarAgentState.DECELERATING_BECAUSE_OF_A_NOT_GREEN_SEM;
 			}
 			break;
 		case CarAgentState.DECELERATING_BECAUSE_OF_A_CAR:
-			this.currentSpeed -= deceleration * dt;
+			this.currentSpeed -= this.deceleration * dt;
 			if (this.currentSpeed <= 0) {
-				state =  CarAgentState.STOPPED;
+                this.state =  CarAgentState.STOPPED;
 			} else if (this.carFarEnough()) {
-				state = CarAgentState.WAIT_A_BIT;
-				waitingTime = 0;
+                this.state = CarAgentState.WAIT_A_BIT;
+                this.waitingTime = 0;
 			}
 			break;
 		case CarAgentState.DECELERATING_BECAUSE_OF_A_NOT_GREEN_SEM:
-			this.currentSpeed -= deceleration * dt;
+			this.currentSpeed -= this.deceleration * dt;
 			if (this.currentSpeed <= 0) {
-				state =  CarAgentState.WAITING_FOR_GREEN_SEM;
-			} else if (!detectedRedOrOrgangeSemNear()) {
-				state = CarAgentState.ACCELERATING;
+                this.state =  CarAgentState.WAITING_FOR_GREEN_SEM;
+			} else if (!this.detectedRedOrOrgangeSemNear()) {
+                this.state = CarAgentState.ACCELERATING;
 			}
 			break;
 		case CarAgentState.WAIT_A_BIT:
-			waitingTime += dt;
-			if (waitingTime > MAX_WAITING_TIME) {
-				state = CarAgentState.ACCELERATING;
+            this.waitingTime += dt;
+			if (this.waitingTime > MAX_WAITING_TIME) {
+                this.state = CarAgentState.ACCELERATING;
 			}
 			break;
 		case CarAgentState.WAITING_FOR_GREEN_SEM:
-			if (detectedGreenSem()) {
-				state = CarAgentState.ACCELERATING;
+			if (this.detectedGreenSem()) {
+                this.state = CarAgentState.ACCELERATING;
 			}
 			break;		
 		}
 		
-		if (currentSpeed > 0) {
-			selectedAction = Optional.of(new MoveForward(currentSpeed * dt));
+		if (this.currentSpeed > 0) {
+            this.selectedAction = Optional.of(new MoveForward(this.currentSpeed * dt));
 		}
 
 	}
 		
 	private boolean detectedNearCar() {
-		Optional<CarAgentInfo> car = currentPercept.nearestCarInFront();
+		final Optional<CarAgentInfo> car = this.currentPercept.nearestCarInFront();
 		if (car.isEmpty()) {
 			return false;
 		} else {
-			double dist = car.get().getPos() - currentPercept.roadPos();
+			final double dist = car.get().getPos() - this.currentPercept.roadPos();
 			return dist < CAR_NEAR_DIST;
 		}
 	}
 	
 	private boolean detectedRedOrOrgangeSemNear() {
-		Optional<TrafficLightInfo> sem = currentPercept.nearestSem();
+		final Optional<TrafficLightInfo> sem = this.currentPercept.nearestSem();
 		if (sem.isEmpty() || sem.get().sem().isGreen()) {
 			return false;
 		} else {
-			double dist = sem.get().roadPos() - currentPercept.roadPos();
+			final double dist = sem.get().roadPos() - this.currentPercept.roadPos();
 			return dist > 0 && dist < SEM_NEAR_DIST;
 		}
 	}
 
 
 	private boolean detectedGreenSem() {
-		Optional<TrafficLightInfo> sem = currentPercept.nearestSem();
+		final Optional<TrafficLightInfo> sem = this.currentPercept.nearestSem();
 		return (!sem.isEmpty() && sem.get().sem().isGreen());
 	}
 	
 	private boolean carFarEnough() {
-		Optional<CarAgentInfo> car = currentPercept.nearestCarInFront();
+		final Optional<CarAgentInfo> car = this.currentPercept.nearestCarInFront();
 		if (car.isEmpty()) {
 			return true;
 		} else {
-			double dist = car.get().getPos() - currentPercept.roadPos();
+			final double dist = car.get().getPos() - this.currentPercept.roadPos();
 			return dist > CAR_FAR_ENOUGH_DIST;
 		}
 	}

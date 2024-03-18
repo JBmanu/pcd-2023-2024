@@ -7,79 +7,79 @@ import java.awt.event.*;
 public class CounterGUI extends JFrame 
                         implements ActionListener, CounterEventListener {
 
-	private JButton start;
-	private JButton stop;
-	private JButton reset;
-	private JTextField display;
+	private final JButton start;
+	private final JButton stop;
+	private final JButton reset;
+	private final JTextField display;
 	
-	private Controller controller;
-	private Counter counter;
+	private final Controller controller;
+	private final Counter counter;
 	
-	public CounterGUI(Counter c, Controller contr){
-		setTitle("Counter GUI");
-		setSize(300,100);		
-		counter = c;		
-		controller = contr;
-		display = new JTextField(5);
-		display.setEditable(false);		
-		display.setText(""+ c.getValue());
-		start = new JButton("start");
-		stop  = new JButton("stop");
-		reset = new JButton("reset");
-		stop.setEnabled(false);
+	public CounterGUI(final Counter c, final Controller contr){
+        this.setTitle("Counter GUI");
+        this.setSize(300,100);
+        this.counter = c;
+        this.controller = contr;
+        this.display = new JTextField(5);
+        this.display.setEditable(false);
+        this.display.setText(""+ c.getValue());
+        this.start = new JButton("start");
+        this.stop = new JButton("stop");
+        this.reset = new JButton("reset");
+        this.stop.setEnabled(false);
 		
-		Container cp = getContentPane();
-		JPanel panel = new JPanel();
+		final Container cp = this.getContentPane();
+		final JPanel panel = new JPanel();
 		
-		Box p0 = new Box(BoxLayout.X_AXIS);
-		p0.add(display);
-		Box p1 = new Box(BoxLayout.X_AXIS);
-		p1.add(start);
-		p1.add(stop);
-		p1.add(reset);
-		Box p2 = new Box(BoxLayout.Y_AXIS);
+		final Box p0 = new Box(BoxLayout.X_AXIS);
+		p0.add(this.display);
+		final Box p1 = new Box(BoxLayout.X_AXIS);
+		p1.add(this.start);
+		p1.add(this.stop);
+		p1.add(this.reset);
+		final Box p2 = new Box(BoxLayout.Y_AXIS);
 		p2.add(p0);
 		p2.add(Box.createVerticalStrut(10));
 		p2.add(p1);
 		
 		panel.add(p2);
 		cp.add(panel);
-		
-		addWindowListener(new WindowAdapter(){
-			public void windowClosing(WindowEvent ev){
+
+        this.addWindowListener(new WindowAdapter(){
+			public void windowClosing(final WindowEvent ev){
 				System.exit(-1);
 			}
-			public void windowClosed(WindowEvent ev){
+			public void windowClosed(final WindowEvent ev){
 				System.exit(-1);
 			}
 		});
 
-		start.addActionListener(this);
-		stop.addActionListener(this);
-		reset.addActionListener(this);
-		counter.addListener(this);
+        this.start.addActionListener(this);
+        this.stop.addActionListener(this);
+        this.reset.addActionListener(this);
+        this.counter.addListener(this);
 	}
 	
-	public void actionPerformed(ActionEvent ev){
-		Object src = ev.getSource();
-		if (src==start){	
-			controller.notifyStarted();
-			start.setEnabled(false);
-			stop.setEnabled(true);
-			reset.setEnabled(false);			
-		} else if (src == stop){
-			controller.notifyStopped();
-			start.setEnabled(true);
-			stop.setEnabled(false);
-			reset.setEnabled(true);
-		} else if (src == reset){
-			controller.notifyReset();
+	public void actionPerformed(final ActionEvent ev){
+		final Object src = ev.getSource();
+		if (src== this.start){
+            this.controller.notifyStarted();
+            this.start.setEnabled(false);
+            this.stop.setEnabled(true);
+            this.reset.setEnabled(false);
+		} else if (src == this.stop){
+            this.controller.notifyStopped();
+            this.start.setEnabled(true);
+            this.stop.setEnabled(false);
+            this.reset.setEnabled(true);
+		} else if (src == this.reset){
+            this.controller.notifyReset();
 		}
 	}
 	
 	public void counterChanged(final CounterEvent ev){
 		SwingUtilities.invokeLater(()-> {
-			display.setText(""+ ev.getValue());
+            this.display.setText(""+ ev.getValue());
 		});
 	}
 	

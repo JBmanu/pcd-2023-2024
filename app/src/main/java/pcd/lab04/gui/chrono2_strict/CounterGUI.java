@@ -12,89 +12,89 @@ import java.awt.event.*;
  */
 public class CounterGUI extends JFrame implements ActionListener {
 
-	private JButton start;
-	private JButton stop;
-	private JButton reset;
-	private JTextField display;
+	private final JButton start;
+	private final JButton stop;
+	private final JButton reset;
+	private final JTextField display;
 	
-	private Controller controller;
+	private final Controller controller;
 	
-	public CounterGUI(Controller contr, int initialValue){
-		setTitle("Counter GUI");
-		setSize(300,100);		
-		controller = contr;
-		display = new JTextField(5);
-		display.setEditable(false);		
-		display.setText(""+ initialValue);
-		start = new JButton("start");
-		stop  = new JButton("stop");
-		reset = new JButton("reset");
-		stop.setEnabled(false);
+	public CounterGUI(final Controller contr, final int initialValue){
+        this.setTitle("Counter GUI");
+        this.setSize(300,100);
+        this.controller = contr;
+        this.display = new JTextField(5);
+        this.display.setEditable(false);
+        this.display.setText(""+ initialValue);
+        this.start = new JButton("start");
+        this.stop = new JButton("stop");
+        this.reset = new JButton("reset");
+        this.stop.setEnabled(false);
 		
-		Container cp = getContentPane();
-		JPanel panel = new JPanel();
+		final Container cp = this.getContentPane();
+		final JPanel panel = new JPanel();
 		
-		Box p0 = new Box(BoxLayout.X_AXIS);
-		p0.add(display);
-		Box p1 = new Box(BoxLayout.X_AXIS);
-		p1.add(start);
-		p1.add(stop);
-		p1.add(reset);
-		Box p2 = new Box(BoxLayout.Y_AXIS);
+		final Box p0 = new Box(BoxLayout.X_AXIS);
+		p0.add(this.display);
+		final Box p1 = new Box(BoxLayout.X_AXIS);
+		p1.add(this.start);
+		p1.add(this.stop);
+		p1.add(this.reset);
+		final Box p2 = new Box(BoxLayout.Y_AXIS);
 		p2.add(p0);
 		p2.add(Box.createVerticalStrut(10));
 		p2.add(p1);
 		
 		panel.add(p2);
 		cp.add(panel);
-		
-		addWindowListener(new WindowAdapter(){
-			public void windowClosing(WindowEvent ev){
+
+        this.addWindowListener(new WindowAdapter(){
+			public void windowClosing(final WindowEvent ev){
 				System.exit(-1);
 			}
-			public void windowClosed(WindowEvent ev){
+			public void windowClosed(final WindowEvent ev){
 				System.exit(-1);
 			}
 		});
 
-		start.addActionListener(this);
-		stop.addActionListener(this);
-		reset.addActionListener(this);
+        this.start.addActionListener(this);
+        this.stop.addActionListener(this);
+        this.reset.addActionListener(this);
 	}
 	
-	public void actionPerformed(ActionEvent ev){
-		Object src = ev.getSource();
-		if (src==start){	
-			controller.notifyStarted();
-		} else if (src == stop){
-			controller.notifyStopped();
-			start.setEnabled(true);
-			stop.setEnabled(false);
-			reset.setEnabled(true);
-		} else if (src == reset){
-			controller.notifyReset();
+	public void actionPerformed(final ActionEvent ev){
+		final Object src = ev.getSource();
+		if (src== this.start){
+            this.controller.notifyStarted();
+		} else if (src == this.stop){
+            this.controller.notifyStopped();
+            this.start.setEnabled(true);
+            this.stop.setEnabled(false);
+            this.reset.setEnabled(true);
+		} else if (src == this.reset){
+            this.controller.notifyReset();
 		}
 	}
 	
 	public void setCountingState() {
 		SwingUtilities.invokeLater(()-> {
-			start.setEnabled(false);
-			stop.setEnabled(true);
-			reset.setEnabled(false);			
+            this.start.setEnabled(false);
+            this.stop.setEnabled(true);
+            this.reset.setEnabled(false);
 		});
 	}
 
 	public void setIdleState() {
 		SwingUtilities.invokeLater(()-> {
-			start.setEnabled(true);
-			stop.setEnabled(false);
-			reset.setEnabled(true);			
+            this.start.setEnabled(true);
+            this.stop.setEnabled(false);
+            this.reset.setEnabled(true);
 		});
 	}
 
-	public void updateCountValue(int value) {
+	public void updateCountValue(final int value) {
 		SwingUtilities.invokeLater(()-> {
-			display.setText("" + value);
+            this.display.setText("" + value);
 		});
 	}
 

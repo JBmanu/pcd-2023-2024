@@ -7,8 +7,8 @@ package pcd.lab03.liveness.deadlock_simplest;
  *
  */
 public class TestDeadlockedResource {
-	public static void main(String[] args) {
-		Resource res = new Resource();
+	public static void main(final String[] args) {
+		final Resource res = new Resource();
 		new ThreadA(res).start();
 		new ThreadB(res).start();
 	}

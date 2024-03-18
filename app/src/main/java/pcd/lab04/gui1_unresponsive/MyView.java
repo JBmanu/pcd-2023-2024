@@ -13,39 +13,39 @@ import javax.swing.SwingUtilities;
 
 class MyView extends JFrame implements ActionListener {
 
-	private MyController controller;
+	private final MyController controller;
 	
-	public MyView(MyController controller) {
+	public MyView(final MyController controller) {
 		super("My View");
 		
 		this.controller = controller;
+
+        this.setSize(400, 60);
+        this.setResizable(false);
 		
-		setSize(400, 60);
-		setResizable(false);
-		
-		JButton button1 = new JButton("Event #1");
+		final JButton button1 = new JButton("Event #1");
 		button1.addActionListener(this);
 
-		JButton button2 = new JButton("Event #2");
+		final JButton button2 = new JButton("Event #2");
 		button2.addActionListener(this);
 		
-		JPanel buttons = new JPanel();
+		final JPanel buttons = new JPanel();
 		buttons.add(button1);		
-		buttons.add(button2);		
-		setLayout(new BorderLayout());
-	    add(buttons,BorderLayout.NORTH);
-	    		
-		addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent ev) {
+		buttons.add(button2);
+        this.setLayout(new BorderLayout());
+        this.add(buttons,BorderLayout.NORTH);
+
+        this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(final WindowEvent ev) {
 				System.exit(-1);
 			}
 		});
 	}
 	
-	public void actionPerformed(ActionEvent ev) {
+	public void actionPerformed(final ActionEvent ev) {
 		try {
-			controller.processEvent(ev.getActionCommand());
-		} catch (Exception ex) {
+            this.controller.processEvent(ev.getActionCommand());
+		} catch (final Exception ex) {
 		}
 	}
 	

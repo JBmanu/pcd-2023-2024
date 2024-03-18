@@ -2,29 +2,29 @@ package pcd.ass01.simtrafficbase;
 
 public  class CarAgentInfo {
 
-	private CarAgent car;
+	private final CarAgent car;
 	private double pos;
-	private Road road;
+	private final Road road;
 	
-	public CarAgentInfo(CarAgent car, Road road, double pos) {
+	public CarAgentInfo(final CarAgent car, final Road road, final double pos) {
 		this.car = car;
 		this.road = road;
 		this.pos = pos;
 	}
 	
 	public double getPos() {
-		return pos;
+		return this.pos;
 	}
 	
-	public void updatePos(double pos) {
+	public void updatePos(final double pos) {
 		this.pos = pos;
 	}
 	
 	public CarAgent getCar() {
-		return car;
+		return this.car;
 	}	
 	
 	public Road getRoad() {
-		return road;
+		return this.road;
 	}
 }

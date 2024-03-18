@@ -9,23 +9,23 @@ package pcd.lab04.gui.chrono2_strict;
 public class Counter {
 	
 	private int cont;
-	private int base;
+	private final int base;
 	
-	public Counter(int base){
+	public Counter(final int base){
 		this.cont = base;
 		this.base = base;
 	}
 	
 	public synchronized void inc(){
-		cont++;
-		System.out.println("count "+cont);
+        this.cont++;
+		System.out.println("count "+ this.cont);
 	}
 	
 	public synchronized void reset(){
-		cont = base;
+        this.cont = this.base;
 	}
 	
 	public synchronized int getValue(){
-		return cont;
+		return this.cont;
 	}
 }

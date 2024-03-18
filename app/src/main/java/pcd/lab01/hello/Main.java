@@ -2,11 +2,11 @@ package pcd.lab01.hello;
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(final String[] args) throws Exception {
 		
 		log("Number of processors: " + Runtime.getRuntime().availableProcessors());
 		
-		MyThread myThread = new MyThread("MySimpleThread");
+		final MyThread myThread = new MyThread("MySimpleThread");
 		myThread.start();		
 		
 		log("Thread spawned.");
@@ -18,7 +18,7 @@ public class Main {
 		
 	}
 
-	private static void log(String msg) {
+	private static void log(final String msg) {
 		System.out.println("[ " + Thread.currentThread().getName()+ " ][ " + System.currentTimeMillis() + " ] " + msg); 
 	}
 	

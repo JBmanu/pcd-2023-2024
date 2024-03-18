@@ -2,19 +2,19 @@ package pcd.lab04.gui2_mvc_unresponsive;
 
 public class MyController {
 
-	private MyModel model;
+	private final MyModel model;
 
-	public MyController(MyModel model) {
+	public MyController(final MyModel model) {
 		this.model = model;
 	}
 
-	public void processEvent(String event) {
+	public void processEvent(final String event) {
 		try {
 			System.out.println("[Controller] Processing the event " + event + " ...");
 			Thread.sleep(5000);
-			model.update();
+            this.model.update();
 			System.out.println("[Controller] Processing the event done.");
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
 	}

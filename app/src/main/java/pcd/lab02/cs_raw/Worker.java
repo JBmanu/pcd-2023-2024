@@ -4,38 +4,38 @@ import java.util.*;
 
 public abstract class Worker extends Thread {
 	
-	private Random rand;
+	private final Random rand;
 	
-	public Worker(String name){
+	public Worker(final String name){
 		super(name);
-		rand = new Random();
+        this.rand = new Random();
 	}
 
-	protected void wasteTime(long ms){
+	protected void wasteTime(final long ms){
 		try {
 			sleep(ms);
-		} catch (InterruptedException ex){
+		} catch (final InterruptedException ex){
 			ex.printStackTrace();
 		}
 	}
 
-	protected void wasteRandomTime(long min, long max){
+	protected void wasteRandomTime(final long min, final long max){
 		try {
-			double value = rand.nextDouble();
-			double delay = min + value*(max-min);
+			final double value = this.rand.nextDouble();
+			final double delay = min + value*(max-min);
 			sleep((int)delay);
-		} catch (InterruptedException ex){
+		} catch (final InterruptedException ex){
 			ex.printStackTrace();
 		}
 	}
 
-	protected void print(String msg){
+	protected void print(final String msg){
 		synchronized (System.out){
 			System.out.print(msg);
 		}
 	}
 
-	protected void println(String msg){
+	protected void println(final String msg){
 		synchronized (System.out){
 			System.out.println(msg);
 		}

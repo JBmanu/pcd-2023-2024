@@ -16,14 +16,14 @@ public class Cron {
 	
 	public void stop(){
 		startTime = getTime();
-		running = false;
+        this.running = false;
 	}
 	
 	public long getTime(){
-		if (running){
-			return 	System.currentTimeMillis() - startTime;
+		if (this.running){
+			return 	System.currentTimeMillis() - this.startTime;
 		} else {
-			return startTime;
+			return this.startTime;
 		}
 	}
 }

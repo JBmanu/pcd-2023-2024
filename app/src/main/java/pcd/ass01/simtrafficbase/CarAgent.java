@@ -22,11 +22,11 @@ public abstract class CarAgent extends AbstractAgent {
 	protected Optional<Action> selectedAction;
 	
 	
-	public CarAgent(String id, RoadsEnv env, Road road, 
-			double initialPos, 
-			double acc, 
-			double dec,
-			double vmax) {
+	public CarAgent(final String id, final RoadsEnv env, final Road road,
+                    final double initialPos,
+                    final double acc,
+                    final double dec,
+                    final double vmax) {
 		super(id);
 		this.acceleration = acc;
 		this.deceleration = dec;
@@ -39,23 +39,23 @@ public abstract class CarAgent extends AbstractAgent {
 	 * Basic behaviour of a car agent structured into a sense/decide/act structure 
 	 * 
 	 */
-	public void step(int dt) {
+	public void step(final int dt) {
 
 		/* sense */
 
-		AbstractEnvironment env = this.getEnv();		
-		currentPercept = (CarPercept) env.getCurrentPercepts(getId());			
+		final AbstractEnvironment env = this.getEnv();
+        this.currentPercept = (CarPercept) env.getCurrentPercepts(this.getId());
 
 		/* decide */
-		
-		selectedAction = Optional.empty();
-		
-		decide(dt);
+
+        this.selectedAction = Optional.empty();
+
+        this.decide(dt);
 		
 		/* act */
 		
-		if (selectedAction.isPresent()) {
-			env.doAction(getId(), selectedAction.get());
+		if (this.selectedAction.isPresent()) {
+			env.doAction(this.getId(), this.selectedAction.get());
 		}
 	}
 	
@@ -68,10 +68,10 @@ public abstract class CarAgent extends AbstractAgent {
 	protected abstract void decide(int dt);
 	
 	public double getCurrentSpeed() {
-		return currentSpeed;
+		return this.currentSpeed;
 	}
 	
-	protected void log(String msg) {
+	protected void log(final String msg) {
 		System.out.println("[CAR " + this.getId() + "] " + msg);
 	}
 

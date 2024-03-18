@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 public class SortingWorker extends AbstractWorker {
 	
-	private int[] array;
-	private int from, to;
+	private final int[] array;
+	private final int from;
+    private final int to;
 	
-	public SortingWorker(String name, int[] array, int from, int to){
+	public SortingWorker(final String name, final int[] array, final int from, final int to){
 		super(name);
 		this.array = array;
 		this.from = from;
@@ -16,8 +17,8 @@ public class SortingWorker extends AbstractWorker {
 	}
 	
 	public void run() {
-		log("started - sorting from " + from + " " + to);
-		Arrays.sort(array, from, to + 1);
-		log("completed.");
+        this.log("started - sorting from " + this.from + " " + this.to);
+		Arrays.sort(this.array, this.from, this.to + 1);
+        this.log("completed.");
 	}
 }

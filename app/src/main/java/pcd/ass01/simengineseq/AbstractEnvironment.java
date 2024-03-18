@@ -7,14 +7,14 @@ package pcd.ass01.simengineseq;
  */
 public abstract class AbstractEnvironment {
 
-	private String id;
+	private final String id;
 	
-	protected AbstractEnvironment(String id) {
+	protected AbstractEnvironment(final String id) {
 		this.id = id;		
 	}
 	
 	public String getId() {
-		return id;
+		return this.id;
 	}
 	
 	/**

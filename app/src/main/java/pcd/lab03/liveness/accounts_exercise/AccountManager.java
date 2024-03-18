@@ -8,17 +8,17 @@ public class AccountManager {
     private final Account[] accounts;
     private final Lock[] locks;
 
-    public AccountManager(int nAccounts, int amount) {
-        accounts = new Account[nAccounts];
-        locks = new ReentrantLock[nAccounts];
+    public AccountManager(final int nAccounts, final int amount) {
+        this.accounts = new Account[nAccounts];
+        this.locks = new ReentrantLock[nAccounts];
 
-        for (int i = 0; i < accounts.length; i++) {
-            accounts[i] = new Account(amount);
-            locks[i] = new ReentrantLock();
+        for (int i = 0; i < this.accounts.length; i++) {
+            this.accounts[i] = new Account(amount);
+            this.locks[i] = new ReentrantLock();
         }
     }
 
-    public void transferMoney(int from, int to, int amount) throws InsufficientBalanceException {
+    public void transferMoney(final int from, final int to, final int amount) throws InsufficientBalanceException {
         // importante l odine dei lock, in modo da dare sempre lo stesso ordine di accesso
 
         int first = from;
@@ -29,18 +29,18 @@ public class AccountManager {
             first = to;
         }
 
-        synchronized (accounts[first]) {
-            synchronized (accounts[last]) {
-                if (accounts[from].getBalance() < amount)
+        synchronized (this.accounts[first]) {
+            synchronized (this.accounts[last]) {
+                if (this.accounts[from].getBalance() < amount)
                     throw new InsufficientBalanceException();
-                accounts[from].debit(amount);
-                accounts[to].credit(amount);
+                this.accounts[from].debit(amount);
+                this.accounts[to].credit(amount);
             }
         }
     }
 
     public int getNumAccounts() {
-        return accounts.length;
+        return this.accounts.length;
     }
 }
 

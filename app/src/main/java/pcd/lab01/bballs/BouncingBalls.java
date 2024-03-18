@@ -12,14 +12,14 @@ import javax.swing.SwingUtilities;
  */
 public class BouncingBalls {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         
-        Context ctx = new Context();
+        final Context ctx = new Context();
         
-        BallViewer viewer = new BallViewer(ctx);
+        final BallViewer viewer = new BallViewer(ctx);
         viewer.start();
       
-        ControlPanel control = new ControlPanel(ctx);
+        final ControlPanel control = new ControlPanel(ctx);
         SwingUtilities.invokeLater(() -> {
             control.setVisible(true);
         });

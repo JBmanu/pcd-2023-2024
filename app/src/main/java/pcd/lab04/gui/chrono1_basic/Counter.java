@@ -4,37 +4,37 @@ import java.util.*;
 
 public class Counter {
 	
-	private ArrayList<CounterEventListener> listeners;
+	private final ArrayList<CounterEventListener> listeners;
 	private int cont;
-	private int base;
+	private final int base;
 	
-	public Counter(int base){
+	public Counter(final int base){
 		this.cont = base;
 		this.base = base;
-		listeners = new ArrayList<CounterEventListener>();
+        this.listeners = new ArrayList<CounterEventListener>();
 	}
 	
 	public synchronized void inc(){
-		cont++;
-		System.out.println("count "+cont);
-		notifyEvent(new CounterEvent(cont));
+        this.cont++;
+		System.out.println("count "+ this.cont);
+        this.notifyEvent(new CounterEvent(this.cont));
 	}
 	
 	public synchronized void reset(){
-		cont = base;
-		notifyEvent(new CounterEvent(cont));
+        this.cont = this.base;
+        this.notifyEvent(new CounterEvent(this.cont));
 	}
 	
 	public synchronized int getValue(){
-		return cont;
+		return this.cont;
 	}
 	
-	public synchronized void addListener(CounterEventListener l){
-		listeners.add(l);
+	public synchronized void addListener(final CounterEventListener l){
+        this.listeners.add(l);
 	}
 	
-	private void notifyEvent(CounterEvent ev){
-		for (CounterEventListener l: listeners){
+	private void notifyEvent(final CounterEvent ev){
+		for (final CounterEventListener l: this.listeners){
 			l.counterChanged(ev);
 		}
 	}

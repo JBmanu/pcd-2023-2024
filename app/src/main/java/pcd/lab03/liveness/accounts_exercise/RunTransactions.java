@@ -7,9 +7,9 @@ public class RunTransactions {
 	private static final int NUM_ITERATIONS = 10000000;
 
 	
-	public static void main(String[] args) {		
+	public static void main(final String[] args) {
 		
-		AccountManager man = new AccountManager(NUM_ACCOUNTS,1000);
+		final AccountManager man = new AccountManager(NUM_ACCOUNTS,1000);
 		
 		for (int i = 0; i < NUM_TRANSFER_AGENTS; i++){
 			new TransferAgent(man, NUM_ITERATIONS).start();

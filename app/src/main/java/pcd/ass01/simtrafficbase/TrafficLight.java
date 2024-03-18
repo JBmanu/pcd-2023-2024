@@ -6,13 +6,16 @@ package pcd.ass01.simtrafficbase;
  */
 public class TrafficLight {
 	
-	public static enum TrafficLightState {GREEN, YELLOW, RED}
-	private TrafficLightState state, initialState;
+	public enum TrafficLightState {GREEN, YELLOW, RED}
+	private TrafficLightState state;
+    private final TrafficLightState initialState;
 	private int currentTimeInState;
-	private int redDuration, greenDuration, yellowDuration;
-	private P2d pos;
+	private final int redDuration;
+    private final int greenDuration;
+    private final int yellowDuration;
+	private final P2d pos;
 	
-	public TrafficLight(P2d pos, TrafficLightState initialState, int greenDuration, int yellowDuration, int redDuration) {
+	public TrafficLight(final P2d pos, final TrafficLightState initialState, final int greenDuration, final int yellowDuration, final int redDuration) {
 		this.redDuration = redDuration;
 		this.greenDuration = greenDuration;
 		this.yellowDuration = yellowDuration;
@@ -21,31 +24,31 @@ public class TrafficLight {
 	}
 	
 	public void init() {
-		state = initialState;
-		currentTimeInState = 0;
+        this.state = this.initialState;
+        this.currentTimeInState = 0;
 	}
 
-	public void step(int dt) {
-		switch (state) {
-		case TrafficLightState.GREEN: 
-			currentTimeInState += dt;
-			if (currentTimeInState >= greenDuration) {
-				state = TrafficLightState.YELLOW; 
-				currentTimeInState = 0;
+	public void step(final int dt) {
+		switch (this.state) {
+		case TrafficLightState.GREEN:
+            this.currentTimeInState += dt;
+			if (this.currentTimeInState >= this.greenDuration) {
+                this.state = TrafficLightState.YELLOW;
+                this.currentTimeInState = 0;
 			}
 			break;
-		case TrafficLightState.RED: 
-			currentTimeInState += dt;
-			if (currentTimeInState >= redDuration) {
-				state = TrafficLightState.GREEN; 
-				currentTimeInState = 0;
+		case TrafficLightState.RED:
+            this.currentTimeInState += dt;
+			if (this.currentTimeInState >= this.redDuration) {
+                this.state = TrafficLightState.GREEN;
+                this.currentTimeInState = 0;
 			}
 			break;
-		case TrafficLightState.YELLOW: 
-			currentTimeInState += dt;
-			if (currentTimeInState >= yellowDuration) {
-				state = TrafficLightState.RED; 
-				currentTimeInState = 0;
+		case TrafficLightState.YELLOW:
+            this.currentTimeInState += dt;
+			if (this.currentTimeInState >= this.yellowDuration) {
+                this.state = TrafficLightState.RED;
+                this.currentTimeInState = 0;
 			}
 			break;
 		default:
@@ -54,18 +57,18 @@ public class TrafficLight {
 	}
 	
 	public boolean isGreen() {
-		return state.equals(TrafficLightState.GREEN);
+		return this.state.equals(TrafficLightState.GREEN);
 	}
 	
 	public boolean isRed() {
-		return state.equals(TrafficLightState.RED);
+		return this.state.equals(TrafficLightState.RED);
 	}
 
 	public boolean isYellow() {
-		return state.equals(TrafficLightState.YELLOW);
+		return this.state.equals(TrafficLightState.YELLOW);
 	}
 	
 	public P2d getPos() {
-		return pos;
+		return this.pos;
 	}
 }

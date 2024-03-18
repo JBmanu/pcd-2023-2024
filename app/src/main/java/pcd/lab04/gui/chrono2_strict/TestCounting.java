@@ -9,10 +9,10 @@ package pcd.lab04.gui.chrono2_strict;
  *
  */
 public class TestCounting {
-	public static void main(String[] args) {
-		Counter counter = new Counter(0);
-		Controller controller = new Controller(counter);
-        CounterView view = new CounterView(controller, counter.getValue());
+	public static void main(final String[] args) {
+		final Counter counter = new Counter(0);
+		final Controller controller = new Controller(counter);
+        final CounterView view = new CounterView(controller, counter.getValue());
         controller.setView(view);
         view.display();
 	}

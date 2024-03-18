@@ -15,50 +15,50 @@ import javax.swing.SwingUtilities;
 
 class MyView extends JFrame implements ActionListener, ModelObserver {
 
-	private MyController controller;
-	private JTextField state;
+	private final MyController controller;
+	private final JTextField state;
 	
-	public MyView(MyController controller) {
+	public MyView(final MyController controller) {
 		super("My View");
 		
 		this.controller = controller;
+
+        this.setSize(400, 60);
+        this.setResizable(false);
 		
-		setSize(400, 60);
-		setResizable(false);
-		
-		JButton button1 = new JButton("Event #1");
+		final JButton button1 = new JButton("Event #1");
 		button1.addActionListener(this);
 
-		JButton button2 = new JButton("Event #2");
+		final JButton button2 = new JButton("Event #2");
 		button2.addActionListener(this);
+
+        this.state = new JTextField(10);
 		
-		state = new JTextField(10);
-		
-		JPanel panel = new JPanel();
+		final JPanel panel = new JPanel();
 		panel.add(button1);		
 		panel.add(button2);	
-		panel.add(state);
-		
-		setLayout(new BorderLayout());
-	    add(panel,BorderLayout.NORTH);
-	    		
-		addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent ev) {
+		panel.add(this.state);
+
+        this.setLayout(new BorderLayout());
+        this.add(panel,BorderLayout.NORTH);
+
+        this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(final WindowEvent ev) {
 				System.exit(-1);
 			}
 		});
 	}
 	
-	public void actionPerformed(ActionEvent ev) {
+	public void actionPerformed(final ActionEvent ev) {
 		try {
-			controller.processEvent(ev.getActionCommand());
-		} catch (Exception ex) {
+            this.controller.processEvent(ev.getActionCommand());
+		} catch (final Exception ex) {
 		}
 	}
 
 	@Override
-	public void modelUpdated(MyModel model) {
-		state.setText("state: "+model.getState());
+	public void modelUpdated(final MyModel model) {
+        this.state.setText("state: "+model.getState());
 	}
 
 	public void display() {

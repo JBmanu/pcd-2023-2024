@@ -5,17 +5,17 @@ public class Resource {
 	private final Object right = new Object();
 	
 	public void leftRight(){
-		synchronized(left){
-			synchronized(right){
-				doSomething();
+		synchronized(this.left){
+			synchronized(this.right){
+                this.doSomething();
 			}
 		}
 	}
 	
 	public void rightLeft(){
-		synchronized(right){
-			synchronized(left){
-				doSomethingElse();
+		synchronized(this.right){
+			synchronized(this.left){
+                this.doSomethingElse();
 			}
 		}
 		/*

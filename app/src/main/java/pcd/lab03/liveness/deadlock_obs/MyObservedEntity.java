@@ -5,31 +5,31 @@ import java.util.List;
 
 public class MyObservedEntity implements Observed {
 
-	private List<Observer> obsList;
+	private final List<Observer> obsList;
 	private int state;
 
 	public MyObservedEntity(){
-		obsList = new ArrayList<Observer>();
+        this.obsList = new ArrayList<Observer>();
 	}
 
-	public void register(Observer obs) {
-		obsList.add(obs);
+	public void register(final Observer obs) {
+        this.obsList.add(obs);
 	}
 
 	public synchronized int getState() {
-		return state;
+		return this.state;
 	}
 
 	public synchronized void changeState1() {
-		state++;
-		for (Observer o: obsList){
+        this.state++;
+		for (final Observer o: this.obsList){
 			o.notifyStateChanged(this);
 		}
 	}
 
 	public synchronized void changeState2() {
-		state--;
-		for (Observer o: obsList){
+        this.state--;
+		for (final Observer o: this.obsList){
 			o.notifyStateChanged(this);
 		}
 	}

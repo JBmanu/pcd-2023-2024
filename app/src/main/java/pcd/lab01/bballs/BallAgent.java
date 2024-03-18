@@ -5,57 +5,57 @@ import java.util.*;
 public class BallAgent extends BasicAgent {
     
     private P2d pos;
-    private V2d vel;
-    private double speed;
-    private Context ctx;
+    private final V2d vel;
+    private final double speed;
+    private final Context ctx;
     private long lastUpdate;
     private static final int DELAY_MS = 5;
     
-    public BallAgent(int id, Context ctx){
+    public BallAgent(final int id, final Context ctx){
     	super("BallAgent-"+id);
     	this.ctx = ctx;
-        pos = new P2d(0,0);
-        Random rand = new Random(System.currentTimeMillis());
-        double dx = rand.nextDouble();
-        vel = new V2d(dx,Math.sqrt(1-dx*dx));
-        speed = rand.nextDouble()*3;
+        this.pos = new P2d(0,0);
+        final Random rand = new Random(System.currentTimeMillis());
+        final double dx = rand.nextDouble();
+        this.vel = new V2d(dx,Math.sqrt(1-dx*dx));
+        this.speed = rand.nextDouble()*3;
     }
 
     public void run() {
         //log("INIT: vel "+vel+"speed "+speed);
         try {
-            lastUpdate = System.currentTimeMillis();
-	        while (!hasBeenStopped()){
-	            updatePos();
+            this.lastUpdate = System.currentTimeMillis();
+	        while (!this.hasBeenStopped()){
+                this.updatePos();
 	            Thread.sleep(DELAY_MS);	
 	        }
-        } catch (Exception ex){
+        } catch (final Exception ex){
             ex.printStackTrace();
         }
     }
     
     private void updatePos(){
-        long time = System.currentTimeMillis();
-        long dt = time - lastUpdate;
-        lastUpdate = time;
-        pos = pos.sum(vel.mul(speed*dt*0.001));
-        applyConstraints();
+        final long time = System.currentTimeMillis();
+        final long dt = time - this.lastUpdate;
+        this.lastUpdate = time;
+        this.pos = this.pos.sum(this.vel.mul(this.speed *dt*0.001));
+        this.applyConstraints();
     }
 
     private void applyConstraints(){
-        Boundary bounds = ctx.getBounds();
-        if (pos.x > bounds.getX1()){
-            pos.x = bounds.getX1();
-            vel.x = -vel.x;
-        } else if (pos.x < bounds.getX0()){
-            pos.x = bounds.getX0();
-            vel.x = -vel.x;
-        } else if (pos.y > bounds.getY1()){
-            pos.y = bounds.getY1();
-            vel.y = -vel.y;
-        } else if (pos.y < bounds.getY0()){
-            pos.y = bounds.getY0();
-            vel.y = -vel.y;
+        final Boundary bounds = this.ctx.getBounds();
+        if (this.pos.x > bounds.getX1()){
+            this.pos.x = bounds.getX1();
+            this.vel.x = -this.vel.x;
+        } else if (this.pos.x < bounds.getX0()){
+            this.pos.x = bounds.getX0();
+            this.vel.x = -this.vel.x;
+        } else if (this.pos.y > bounds.getY1()){
+            this.pos.y = bounds.getY1();
+            this.vel.y = -this.vel.y;
+        } else if (this.pos.y < bounds.getY0()){
+            this.pos.y = bounds.getY0();
+            this.vel.y = -this.vel.y;
         }
     }
     
@@ -67,7 +67,7 @@ public class BallAgent extends BasicAgent {
      */
 
     public P2d getPos(){        
-    	return new P2d(pos.x,pos.y);
+    	return new P2d(this.pos.x, this.pos.y);
     }
 
 }

@@ -7,35 +7,35 @@ import java.util.List;
 
 public class Road {
 
-	private double len;
-	private P2d from;
-	private P2d to;
-	private List<TrafficLightInfo> trafficLights;
+	private final double len;
+	private final P2d from;
+	private final P2d to;
+	private final List<TrafficLightInfo> trafficLights;
 
-	public Road(P2d from, P2d to) {
+	public Road(final P2d from, final P2d to) {
 		this.from = from;
 		this.to = to;
 		this.len = P2d.len(from, to);
-		trafficLights = new ArrayList<>();
+        this.trafficLights = new ArrayList<>();
 	}
 	
 	public double getLen() {
-		return len;
+		return this.len;
 	}
 	
 	public P2d getFrom() {
-		return from;
+		return this.from;
 	}
 	
 	public P2d getTo() {
-		return to;
+		return this.to;
 	}
 	
-	public void addTrafficLight(TrafficLight sem, double pos) {
-		trafficLights.add(new TrafficLightInfo(sem, this, pos));
+	public void addTrafficLight(final TrafficLight sem, final double pos) {
+        this.trafficLights.add(new TrafficLightInfo(sem, this, pos));
 	}
 	
 	public List<TrafficLightInfo> getTrafficLights(){
-		return trafficLights;
+		return this.trafficLights;
 	}
 }

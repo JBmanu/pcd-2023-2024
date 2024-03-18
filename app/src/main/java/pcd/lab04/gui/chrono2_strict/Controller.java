@@ -10,31 +10,31 @@ package pcd.lab04.gui.chrono2_strict;
 public class Controller {
 
 	private static final int DELTA_TIME = 10;
-	private Flag stopFlag;
+	private final Flag stopFlag;
 	private CounterAgent agent;
-	private Counter counter;
+	private final Counter counter;
 	private CounterView view;
 	
-	public Controller(Counter counter) {
+	public Controller(final Counter counter) {
 		this.counter = counter;
 		this.stopFlag = new Flag();
 	}
 	
-	public synchronized void setView(CounterView view) {
+	public synchronized void setView(final CounterView view) {
 		this.view = view;
 	}
 	
 	public synchronized void notifyStarted() {
-		agent = new CounterAgent(counter, stopFlag, view, DELTA_TIME);
-		agent.start();					
+        this.agent = new CounterAgent(this.counter, this.stopFlag, this.view, DELTA_TIME);
+        this.agent.start();
 	}
 	
 	public synchronized void notifyStopped() {
-		stopFlag.set();
+        this.stopFlag.set();
 	}
 
 	public synchronized void notifyReset() {
-		counter.reset();
-		view.updateCountValue(counter.getValue());
+        this.counter.reset();
+        this.view.updateCountValue(this.counter.getValue());
 	}
 }

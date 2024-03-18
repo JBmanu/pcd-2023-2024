@@ -7,7 +7,7 @@ package pcd.ass01.simengineseq;
  */
 public abstract class AbstractAgent {
 	
-	private String myId;
+	private final String myId;
 	private AbstractEnvironment env;
 	
 	/**
@@ -15,7 +15,7 @@ public abstract class AbstractAgent {
 	 * 
 	 * @param id
 	 */
-	protected AbstractAgent(String id) {
+	protected AbstractAgent(final String id) {
 		this.myId = id;
 	}
 	
@@ -24,7 +24,7 @@ public abstract class AbstractAgent {
 	 * 
 	 * @param env
 	 */
-	public void init(AbstractEnvironment env) {
+	public void init(final AbstractEnvironment env) {
 		this.env = env;
 	}
 	
@@ -37,7 +37,7 @@ public abstract class AbstractAgent {
 	
 
 	public String getId() {
-		return myId;
+		return this.myId;
 	}
 	
 	protected AbstractEnvironment getEnv() {

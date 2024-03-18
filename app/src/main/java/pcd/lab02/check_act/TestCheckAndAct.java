@@ -7,16 +7,16 @@ package pcd.lab02.check_act;
  */
 public class TestCheckAndAct {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(final String[] args) throws Exception {
 
-        int ntimes = 10000;
+        final int ntimes = 10000;
 
-        BoundedCounter c = new BoundedCounter(0, 1);
+        final BoundedCounter c = new BoundedCounter(0, 1);
 
-        WorkerA w1a = new WorkerA(c, ntimes);
-        WorkerA w1b = new WorkerA(c, ntimes);
-        WorkerB w2a = new WorkerB(c, ntimes);
-        WorkerB w2b = new WorkerB(c, ntimes);
+        final WorkerA w1a = new WorkerA(c, ntimes);
+        final WorkerA w1b = new WorkerA(c, ntimes);
+        final WorkerB w2a = new WorkerB(c, ntimes);
+        final WorkerB w2b = new WorkerB(c, ntimes);
 
         w1a.start();
         w1b.start();

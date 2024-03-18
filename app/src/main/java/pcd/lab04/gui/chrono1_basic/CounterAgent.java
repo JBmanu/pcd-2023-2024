@@ -2,23 +2,23 @@ package pcd.lab04.gui.chrono1_basic;
 
 public class CounterAgent extends Thread {
 
-	private Counter counter;
-	private Flag stopFlag;
-	private long delta;
+	private final Counter counter;
+	private final Flag stopFlag;
+	private final long delta;
 	
-	public CounterAgent(Counter c, Flag stopFlag, long delta){
-		counter = c;
+	public CounterAgent(final Counter c, final Flag stopFlag, final long delta){
+        this.counter = c;
 		this.stopFlag = stopFlag;
 		this.delta = delta;
 	}
 	public void run(){
-		stopFlag.reset();
-		while (!stopFlag.isSet()){
-			counter.inc();
-			System.out.println(counter.getValue());
+        this.stopFlag.reset();
+		while (!this.stopFlag.isSet()){
+            this.counter.inc();
+			System.out.println(this.counter.getValue());
 			try {
-				Thread.sleep(delta);
-			} catch(Exception ex){
+				Thread.sleep(this.delta);
+			} catch(final Exception ex){
 			}
 		}
 	}

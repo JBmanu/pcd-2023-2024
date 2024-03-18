@@ -2,11 +2,11 @@ package pcd.lab04.gui.chrono1_basic;
 
 
 public class CounterEvent {
-	private int value;
-	public CounterEvent(int v){
-		value = v;
+	private final int value;
+	public CounterEvent(final int v){
+        this.value = v;
 	}
 	public int getValue(){
-		return value;
+		return this.value;
 	}
 }

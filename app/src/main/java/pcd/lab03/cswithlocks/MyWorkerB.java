@@ -4,9 +4,9 @@ import java.util.concurrent.locks.Lock;
 
 public class MyWorkerB extends Worker {
 	
-	private Lock lock;
+	private final Lock lock;
 	
-	public MyWorkerB(String name, Lock lock){
+	public MyWorkerB(final String name, final Lock lock){
 		super(name);
 		this.lock = lock;
 	}
@@ -14,28 +14,28 @@ public class MyWorkerB extends Worker {
 	public void run(){
 		while (true){
 		  try {
-			  lock.lockInterruptibly();
-			  action1();	
-			  action2();
-		  } catch (InterruptedException ex) {
+              this.lock.lockInterruptibly();
+              this.action1();
+              this.action2();
+		  } catch (final InterruptedException ex) {
 		  } finally {
-			  lock.unlock();
+              this.lock.unlock();
 		  }
-		  action3();
+            this.action3();
 		}
 	}
 	
 	protected void action1(){
-		println("b1");
-		wasteRandomTime(0,1000);	
+        this.println("b1");
+        this.wasteRandomTime(0,1000);
 	}
 	
 	protected void action2(){
-		println("b2");
-		wasteRandomTime(100,200);	
+        this.println("b2");
+        this.wasteRandomTime(100,200);
 	}
 	protected void action3(){
-		println("b3");
-		wasteRandomTime(1000,2000);	
+        this.println("b3");
+        this.wasteRandomTime(1000,2000);
 	}
 }

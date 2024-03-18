@@ -2,24 +2,24 @@ package pcd.lab02.check_act;
 
 public class WorkerA extends Thread{
 	
-	private BoundedCounter counter;
-	private int ntimes;
+	private final BoundedCounter counter;
+	private final int ntimes;
 	
-	public WorkerA(BoundedCounter c, int ntimes){
-		counter = c;
+	public WorkerA(final BoundedCounter c, final int ntimes){
+        this.counter = c;
 		this.ntimes = ntimes;
 	}
 	
 	public void run(){
 		try {
-			for (int i = 0; i < ntimes; i++){
+			for (int i = 0; i < this.ntimes; i++){
 				synchronized (this.counter) {
-					if (counter.getValue() > 0){
-						counter.dec();
+					if (this.counter.getValue() > 0){
+                        this.counter.dec();
 					}
 				}
 			}
-		} catch (Exception ex){
+		} catch (final Exception ex){
 			ex.printStackTrace();
 		}
 	}

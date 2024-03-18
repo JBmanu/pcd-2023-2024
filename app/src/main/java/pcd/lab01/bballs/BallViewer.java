@@ -4,30 +4,30 @@ import javax.swing.SwingUtilities;
 
 public class BallViewer extends BasicAgent {
     
-    private Context context;
-    private ViewerFrame frame;
+    private final Context context;
+    private final ViewerFrame frame;
     private static final int FRAMES_PER_SEC = 25;
     
-    public BallViewer(Context context){
+    public BallViewer(final Context context){
     	super("BallViewer");
         this.context = context ;
-        frame = new ViewerFrame(context,620,620);
+        this.frame = new ViewerFrame(context,620,620);
         SwingUtilities.invokeLater(() -> {
-        	frame.setVisible(true);
+            this.frame.setVisible(true);
         });
    }
     
     public void run(){
         while (!this.hasBeenStopped()) {
-            long t0 = System.currentTimeMillis();
-        	frame.updatePosition(context.getPositions());
-            long t1 = System.currentTimeMillis();
+            final long t0 = System.currentTimeMillis();
+            this.frame.updatePosition(this.context.getPositions());
+            final long t1 = System.currentTimeMillis();
         	//log("update pos");
-            long dt = (1000 / FRAMES_PER_SEC) - (t1-t0);
+            final long dt = (1000 / FRAMES_PER_SEC) - (t1-t0);
             if (dt > 0){
 	            try {
 	                Thread.sleep(dt);     
-	            } catch (Exception ex){
+	            } catch (final Exception ex){
 	            }
             }
         }

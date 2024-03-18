@@ -4,15 +4,15 @@ public class UnsafeCounter {
 
 	private int cont;
 	
-	public UnsafeCounter(int base){
+	public UnsafeCounter(final int base){
 		this.cont = base;
 	}
 	
 	public void inc(){
-		cont++;
+        this.cont++;
 	}
 	
 	public int getValue(){
-		return cont;
+		return this.cont;
 	}
 }

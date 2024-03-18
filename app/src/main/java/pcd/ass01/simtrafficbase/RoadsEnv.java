@@ -16,79 +16,79 @@ public class RoadsEnv extends AbstractEnvironment {
 	private static final int SEM_DETECTION_RANGE = 30;
 	
 	/* list of roads */
-	private List<Road> roads;
+	private final List<Road> roads;
 
 	/* traffic lights */
-	private List<TrafficLight> trafficLights;
+	private final List<TrafficLight> trafficLights;
 	
 	/* cars situated in the environment */	
-	private HashMap<String, CarAgentInfo> registeredCars;
+	private final HashMap<String, CarAgentInfo> registeredCars;
 
 
 	public RoadsEnv() {
 		super("traffic-env");
-		registeredCars = new HashMap<>();	
-		trafficLights = new ArrayList<>();
-		roads = new ArrayList<>();
+        this.registeredCars = new HashMap<>();
+        this.trafficLights = new ArrayList<>();
+        this.roads = new ArrayList<>();
 	}
 	
 	@Override
 	public void init() {
-		for (var tl: trafficLights) {
+		for (final var tl: this.trafficLights) {
 			tl.init();
 		}
 	}
 	
 	@Override
-	public void step(int dt) {
-		for (var tl: trafficLights) {
+	public void step(final int dt) {
+		for (final var tl: this.trafficLights) {
 			tl.step(dt);
 		}
 	}
 	
-	public void registerNewCar(CarAgent car, Road road, double pos) {
-		registeredCars.put(car.getId(), new CarAgentInfo(car, road, pos));
+	public void registerNewCar(final CarAgent car, final Road road, final double pos) {
+        this.registeredCars.put(car.getId(), new CarAgentInfo(car, road, pos));
 	}
 
-	public Road createRoad(P2d p0, P2d p1) {
-		Road r = new Road(p0, p1);
+	public Road createRoad(final P2d p0, final P2d p1) {
+		final Road r = new Road(p0, p1);
 		this.roads.add(r);
 		return r;
 	}
 
-	public TrafficLight createTrafficLight(P2d pos, TrafficLight.TrafficLightState initialState, int greenDuration, int yellowDuration, int redDuration) {
-		TrafficLight tl = new TrafficLight(pos, initialState, greenDuration, yellowDuration, redDuration);
+	public TrafficLight createTrafficLight(final P2d pos, final TrafficLight.TrafficLightState initialState, final int greenDuration, final int yellowDuration, final int redDuration) {
+		final TrafficLight tl = new TrafficLight(pos, initialState, greenDuration, yellowDuration, redDuration);
 		this.trafficLights.add(tl);
 		return tl;
 	}
 
 	@Override
-	public Percept getCurrentPercepts(String agentId) {
+	public Percept getCurrentPercepts(final String agentId) {
 		
-		CarAgentInfo carInfo = registeredCars.get(agentId);
-		double pos = carInfo.getPos();
-		Road road = carInfo.getRoad();
-		Optional<CarAgentInfo> nearestCar = getNearestCarInFront(road,pos, CAR_DETECTION_RANGE);
-		Optional<TrafficLightInfo> nearestSem = getNearestSemaphoreInFront(road,pos, SEM_DETECTION_RANGE);
+		final CarAgentInfo carInfo = this.registeredCars.get(agentId);
+		final double pos = carInfo.getPos();
+		final Road road = carInfo.getRoad();
+		final Optional<CarAgentInfo> nearestCar = this.getNearestCarInFront(road,pos, CAR_DETECTION_RANGE);
+		final Optional<TrafficLightInfo> nearestSem = this.getNearestSemaphoreInFront(road,pos, SEM_DETECTION_RANGE);
 		
 		return new CarPercept(pos, nearestCar, nearestSem);
 	}
 
-	private Optional<CarAgentInfo> getNearestCarInFront(Road road, double carPos, double range){
-		return 
-				registeredCars
+	private Optional<CarAgentInfo> getNearestCarInFront(final Road road, final double carPos, final double range){
+		return
+                this.registeredCars
 				.entrySet()
 				.stream()
 				.map(el -> el.getValue())
 				.filter((carInfo) -> carInfo.getRoad() == road)
 				.filter((carInfo) -> {
-					double dist = carInfo.getPos() - carPos;
+					final double dist = carInfo.getPos() - carPos;
 					return dist > 0 && dist <= range;
 				})
 				.min((c1, c2) -> (int) Math.round(c1.getPos() - c2.getPos()));
 	}
 
-	private Optional<TrafficLightInfo> getNearestSemaphoreInFront(Road road, double carPos, double range){
+	private Optional<TrafficLightInfo> getNearestSemaphoreInFront(final Road road, final double carPos, final double range){
 		return 
 				road.getTrafficLights()
 				.stream()
@@ -98,15 +98,15 @@ public class RoadsEnv extends AbstractEnvironment {
 	
 	
 	@Override
-	public void doAction(String agentId, Action act) {
+	public void doAction(final String agentId, final Action act) {
 		switch (act) {
-		case MoveForward mv: {
-			CarAgentInfo info = registeredCars.get(agentId);
-			Road road = info.getRoad();
-			Optional<CarAgentInfo> nearestCar = getNearestCarInFront(road, info.getPos(), CAR_DETECTION_RANGE);
+		case final MoveForward mv: {
+			final CarAgentInfo info = this.registeredCars.get(agentId);
+			final Road road = info.getRoad();
+			final Optional<CarAgentInfo> nearestCar = this.getNearestCarInFront(road, info.getPos(), CAR_DETECTION_RANGE);
 			
 			if (!nearestCar.isEmpty()) {
-				double dist = nearestCar.get().getPos() - info.getPos();
+				final double dist = nearestCar.get().getPos() - info.getPos();
 				if (dist > mv.distance() + MIN_DIST_ALLOWED) {
 					info.updatePos(info.getPos() + mv.distance());
 				}
@@ -129,10 +129,10 @@ public class RoadsEnv extends AbstractEnvironment {
 	}
 
 	public List<Road> getRoads(){
-		return roads;
+		return this.roads;
 	}
 	
 	public List<TrafficLight> getTrafficLights(){
-		return trafficLights;
+		return this.trafficLights;
 	}
 }

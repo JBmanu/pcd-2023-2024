@@ -7,16 +7,16 @@ package pcd.ass01.simtrafficexamples;
  */
 public class RunTrafficSimulation {
 
-	public static void main(String[] args) {		
+	public static void main(final String[] args) {
 
-		var simulation = new TrafficSimulationSingleRoadTwoCars();
+		final var simulation = new TrafficSimulationSingleRoadTwoCars();
 		// var simulation = new TrafficSimulationSingleRoadSeveralCars();
 		// var simulation = new TrafficSimulationSingleRoadWithTrafficLightTwoCars();
 		// var simulation = new TrafficSimulationWithCrossRoads();
 		simulation.setup();
 		
-		RoadSimStatistics stat = new RoadSimStatistics();
-		RoadSimView view = new RoadSimView();
+		final RoadSimStatistics stat = new RoadSimStatistics();
+		final RoadSimView view = new RoadSimView();
 		view.display();
 		
 		simulation.addSimulationListener(stat);

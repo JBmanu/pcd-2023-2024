@@ -2,22 +2,22 @@ package pcd.lab01.hello;
 
 public class MyThread extends Thread {
 
-	public MyThread(String myName){
+	public MyThread(final String myName){
 		super(myName);
 	}
 	
 	public void run(){
-		log("Hello concurrent world!");
-		log("Sleeping for 5 secs...");
+        this.log("Hello concurrent world!");
+        this.log("Sleeping for 5 secs...");
 		try {
 			Thread.sleep(5000);
-		} catch (InterruptedException ex) {
+		} catch (final InterruptedException ex) {
 			ex.printStackTrace();
 		}
-		log("Done.");
+        this.log("Done.");
 	}
 	
-	private void log(String msg) {
+	private void log(final String msg) {
 		System.out.println("[ " + this.getName()+ " ][ " + System.currentTimeMillis() + " ] " + msg); 
 	}
 }

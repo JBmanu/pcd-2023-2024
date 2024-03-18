@@ -4,39 +4,39 @@ import java.util.concurrent.locks.Lock;
 
 public class MyWorkerA extends Worker {
 	
-	private Lock lock;
+	private final Lock lock;
 	
-	public MyWorkerA(String name, Lock lock){
+	public MyWorkerA(final String name, final Lock lock){
 		super(name);
 		this.lock = lock;
 	}
 	
 	public void run(){
 		while (true){
-		  action1();	
+            this.action1();
 		  try {
-			  lock.lockInterruptibly();
-			  action2();	
-			  action3();	
-		  } catch (InterruptedException ex) {
+              this.lock.lockInterruptibly();
+              this.action2();
+              this.action3();
+		  } catch (final InterruptedException ex) {
 		  } finally {
-			  lock.unlock();
+              this.lock.unlock();
 		  }
 		}
 	}
 	
 	protected void action1(){
-		println("a1");
-		wasteRandomTime(100,500);	
+        this.println("a1");
+        this.wasteRandomTime(100,500);
 	}
 	
 	protected void action2(){
-		println("a2");
-		wasteRandomTime(300,700);	
+        this.println("a2");
+        this.wasteRandomTime(300,700);
 	}
 	protected void action3(){
-		println("a3");
-		wasteRandomTime(300,700);	
+        this.println("a3");
+        this.wasteRandomTime(300,700);
 	}
 }
 

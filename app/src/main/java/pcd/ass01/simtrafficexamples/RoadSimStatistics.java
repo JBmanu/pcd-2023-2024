@@ -24,33 +24,33 @@ public class RoadSimStatistics implements SimulationListener {
 	}
 	
 	@Override
-	public void notifyInit(int t, List<AbstractAgent> agents, AbstractEnvironment env) {
+	public void notifyInit(final int t, final List<AbstractAgent> agents, final AbstractEnvironment env) {
 		// TODO Auto-generated method stub
 		// log("reset: " + t);
-		averageSpeed = 0;
+        this.averageSpeed = 0;
 	}
 
 	@Override
-	public void notifyStepDone(int t, List<AbstractAgent> agents, AbstractEnvironment env) {
+	public void notifyStepDone(final int t, final List<AbstractAgent> agents, final AbstractEnvironment env) {
 		double avSpeed = 0;
-		
-		maxSpeed = -1;
-		minSpeed = Double.MAX_VALUE;
-		for (var agent: agents) {
-			CarAgent car = (CarAgent) agent;
-			double currSpeed = car.getCurrentSpeed();
+
+        this.maxSpeed = -1;
+        this.minSpeed = Double.MAX_VALUE;
+		for (final var agent: agents) {
+			final CarAgent car = (CarAgent) agent;
+			final double currSpeed = car.getCurrentSpeed();
 			avSpeed += currSpeed;			
-			if (currSpeed > maxSpeed) {
-				maxSpeed = currSpeed;
-			} else if (currSpeed < minSpeed) {
-				minSpeed = currSpeed;
+			if (currSpeed > this.maxSpeed) {
+                this.maxSpeed = currSpeed;
+			} else if (currSpeed < this.minSpeed) {
+                this.minSpeed = currSpeed;
 			}
 		}
 		
 		if (agents.size() > 0) {
 			avSpeed /= agents.size();
 		}
-		log("average speed: " + avSpeed);
+        this.log("average speed: " + avSpeed);
 	}
 	
 	public double getAverageSpeed() {
@@ -66,7 +66,7 @@ public class RoadSimStatistics implements SimulationListener {
 	}
 	
 	
-	private void log(String msg) {
+	private void log(final String msg) {
 		System.out.println("[STAT] " + msg);
 	}
 

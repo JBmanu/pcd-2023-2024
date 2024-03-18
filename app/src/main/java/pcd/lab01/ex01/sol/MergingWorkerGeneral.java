@@ -4,45 +4,43 @@ import java.util.List;
 
 public class MergingWorkerGeneral extends AbstractWorker {
 	
-	private int[] array;
-	private List<SortingWorker> workers;
+	private final int[] array;
+	private final List<SortingWorker> workers;
 	
-	public MergingWorkerGeneral(String name, int[] array, List<SortingWorker> workers){
+	public MergingWorkerGeneral(final String name, final int[] array, final List<SortingWorker> workers){
 		super(name);
 		this.array = array;
 		this.workers = workers;
 	}
 	
 	public void run() {
-		int nParts = workers.size();
-		log("started - merging " + nParts +" parts");
-		log("waiting for subparts to be sorted...");
+		final int nParts = this.workers.size();
+        this.log("started - merging " + nParts +" parts");
+        this.log("waiting for subparts to be sorted...");
 		try {
-			for (var w1: workers) {
+			for (final var w1: this.workers) {
 				w1.join();
 			}
-			log("subparts sorted, going to merge...");
+            this.log("subparts sorted, going to merge...");
 			
-			long t0 = System.currentTimeMillis();
-			int[] merged = this.merge(array, nParts);
-			for (int i = 0; i < merged.length; i++) {
-				array[i] = merged[i];
-			}
-			long t1 = System.currentTimeMillis();
-			log("completed -- " + (t1 - t0) + " ms for merging.");
-		} catch(InterruptedException ex) {
-			log("exception.");
+			final long t0 = System.currentTimeMillis();
+			final int[] merged = this.merge(this.array, nParts);
+            System.arraycopy(merged, 0, this.array, 0, merged.length);
+			final long t1 = System.currentTimeMillis();
+            this.log("completed -- " + (t1 - t0) + " ms for merging.");
+		} catch(final InterruptedException ex) {
+            this.log("exception.");
 		}
 	}
 	
-	private int[] merge(int[] v, int nParts) {
-		int[] vnew = new int[v.length];
+	private int[] merge(final int[] v, final int nParts) {
+		final int[] vnew = new int[v.length];
 
-		int partSize = v.length/nParts;
+		final int partSize = v.length/nParts;
 		int from = 0; 
 
-		int[] indexes = new int[nParts];
-		int[] max = new int[nParts];
+		final int[] indexes = new int[nParts];
+		final int[] max = new int[nParts];
 		for (int i = 0; i < indexes.length - 1; i++) {
 			indexes[i] = from;
 			max[i] = from + partSize;

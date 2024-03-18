@@ -4,9 +4,9 @@ import java.util.concurrent.Semaphore;
 
 public class MyWorkerC extends Worker {
 	
-	private Semaphore mutex;
+	private final Semaphore mutex;
 	
-	public MyWorkerC(String name, Semaphore lock){
+	public MyWorkerC(final String name, final Semaphore lock){
 		super(name);
 		this.mutex = lock;
 	}
@@ -14,29 +14,29 @@ public class MyWorkerC extends Worker {
 	public void run(){
 		while (true){
 		  try {
-			  mutex.acquire();
-			  action1();	
-			  action2();
-			  action3();
-		  } catch (InterruptedException ex) {
-			  log("interrupted.");
+              this.mutex.acquire();
+              this.action1();
+              this.action2();
+              this.action3();
+		  } catch (final InterruptedException ex) {
+              this.log("interrupted.");
 		  } finally {
-			  mutex.release();
+              this.mutex.release();
 		  }
 		}
 	}
 	
 	protected void action1(){
-		println("c1");
-		wasteRandomTime(0,2000);	
+        this.println("c1");
+        this.wasteRandomTime(0,2000);
 	}
 	
 	protected void action2(){
-		println("c2");
-		wasteRandomTime(100,200);	
+        this.println("c2");
+        this.wasteRandomTime(100,200);
 	}
 	protected void action3(){
-		println("c3");
-		wasteRandomTime(1000,2000);	
+        this.println("c3");
+        this.wasteRandomTime(1000,2000);
 	}
 }

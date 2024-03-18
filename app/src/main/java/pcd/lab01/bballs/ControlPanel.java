@@ -4,40 +4,40 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class ControlPanel extends JFrame implements ActionListener{
-    private JButton buttonPlus;
-    private JButton buttonMinus;
-    private Context context;
+    private final JButton buttonPlus;
+    private final JButton buttonMinus;
+    private final Context context;
     
-    public ControlPanel(Context ctx){
-        context = ctx;
-        setTitle("Control Panel");
-        setSize(250,60);
-        setResizable(false);
-		addWindowListener(new WindowAdapter(){
-			public void windowClosing(WindowEvent ev){
+    public ControlPanel(final Context ctx){
+        this.context = ctx;
+        this.setTitle("Control Panel");
+        this.setSize(250,60);
+        this.setResizable(false);
+        this.addWindowListener(new WindowAdapter(){
+			public void windowClosing(final WindowEvent ev){
 				System.exit(-1);
 			}
-			public void windowClosed(WindowEvent ev){
+			public void windowClosed(final WindowEvent ev){
 				System.exit(-1);
 			}
 		});
 
-        buttonPlus = new JButton("+ ball");
-        buttonMinus = new JButton("- ball");
-        JPanel p = new JPanel();
-        p.add(buttonPlus);
-        p.add(buttonMinus);
-        getContentPane().add(p);
-        buttonPlus.addActionListener(this);
-        buttonMinus.addActionListener(this);
+        this.buttonPlus = new JButton("+ ball");
+        this.buttonMinus = new JButton("- ball");
+        final JPanel p = new JPanel();
+        p.add(this.buttonPlus);
+        p.add(this.buttonMinus);
+        this.getContentPane().add(p);
+        this.buttonPlus.addActionListener(this);
+        this.buttonMinus.addActionListener(this);
     }
     
-    public void actionPerformed(ActionEvent ev){
-        Object src = ev.getSource();
-        if (src==buttonPlus){
-            context.createNewBall();
+    public void actionPerformed(final ActionEvent ev){
+        final Object src = ev.getSource();
+        if (src== this.buttonPlus){
+            this.context.createNewBall();
         } else {
-            context.removeBall();
+            this.context.removeBall();
         }
     }
 }

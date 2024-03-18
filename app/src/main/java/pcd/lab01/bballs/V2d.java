@@ -19,29 +19,29 @@ public class V2d implements java.io.Serializable {
 
     public double x,y;
 
-    public V2d(double x,double y){
+    public V2d(final double x, final double y){
         this.x = x;
         this.y = y;
     }
 
-    public V2d sum(V2d v){
-        return new V2d(x+v.x,y+v.y);
+    public V2d sum(final V2d v){
+        return new V2d(this.x +v.x, this.y +v.y);
     }
 
     public double abs(){
-        return (double)Math.sqrt(x*x+y*y);
+        return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 
     public V2d getNormalized(){
-        double module=(double)Math.sqrt(x*x+y*y);
-        return new V2d(x/module,y/module);
+        final double module= Math.sqrt(this.x * this.x + this.y * this.y);
+        return new V2d(this.x /module, this.y /module);
     }
 
-    public V2d mul(double fact){
-        return new V2d(x*fact,y*fact);
+    public V2d mul(final double fact){
+        return new V2d(this.x *fact, this.y *fact);
     }
 
     public String toString(){
-        return "V2d("+x+","+y+")";
+        return "V2d("+ this.x +","+ this.y +")";
     }
 }

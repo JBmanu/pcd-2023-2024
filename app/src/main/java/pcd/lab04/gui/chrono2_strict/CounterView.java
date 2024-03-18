@@ -9,25 +9,25 @@ package pcd.lab04.gui.chrono2_strict;
  */
 public class CounterView {
 
-	private CounterGUI gui;
+	private final CounterGUI gui;
 	
-	public CounterView(Controller contr, int initialValue){	
-		gui = new CounterGUI(contr,initialValue);
+	public CounterView(final Controller contr, final int initialValue){
+        this.gui = new CounterGUI(contr,initialValue);
 	}
 	
 	public synchronized void setCountingState() {
-		gui.setCountingState();
+        this.gui.setCountingState();
 	}
 
 	public synchronized void setIdleState() {
-		gui.setIdleState();
+        this.gui.setIdleState();
 	}
 
-	public synchronized void updateCountValue(int value) {
-		gui.updateCountValue(value);
+	public synchronized void updateCountValue(final int value) {
+        this.gui.updateCountValue(value);
 	}
 	
 	public synchronized void display() {
-		gui.display();
+        this.gui.display();
     }
 }
