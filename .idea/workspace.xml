@@ -7,123 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: build">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: pingPong synch">
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/AccountManager.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/RunTransactions.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TransferAgent.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simengineseq/AbstractSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentExtended.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/CarAgentInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/P2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/P2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/RoadsEnv.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/RoadsEnv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/TrafficLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/TrafficLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/V2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/V2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RoadSimStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RoadSimStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RoadSimView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RoadSimView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/TrafficLightInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficbase/TrafficLightInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RunTrafficSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RunTrafficSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RunTrafficSimulationMassiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/RunTrafficSimulationMassiveTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadMassiveNumberOfCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadMassiveNumberOfCars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadSeveralCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadSeveralCars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadTwoCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadTwoCars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadWithTrafficLightTwoCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationSingleRoadWithTrafficLightTwoCars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationWithCrossRoads.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/ass01/simtrafficexamples/TrafficSimulationWithCrossRoads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BallAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BallAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BallViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BallViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BouncingBalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/BouncingBalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/Boundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/Boundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/ControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/P2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/P2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/V2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/bballs/V2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/SequentialSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/SequentialSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/SequentialSortInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/SequentialSortInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/AbstractWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/AbstractWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/ConcurrentSortGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/ConcurrentSortGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/ConcurrentSortTwoThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/ConcurrentSortTwoThreads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/MergingWorkerGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/MergingWorkerGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/MergingWorkerTwoParts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/MergingWorkerTwoParts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/SortingWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/ex01/sol/SortingWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/hello/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/hello/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/hello/MyThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab01/hello/MyThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/TestCheckAndAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/TestCheckAndAct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/check_act/WorkerB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/MyWorkerA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/MyWorkerA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/MyWorkerB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/MyWorkerB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/TestCSWithRawSynchBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/TestCSWithRawSynchBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/cs_raw/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/Cron.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/Cron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/TestLostUpdates.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/TestLostUpdates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/UnsafeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/UnsafeCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab02/lost_updates/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/MyWorkerA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/MyWorkerA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/MyWorkerB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/MyWorkerB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/TestCSWithLocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/TestCSWithLocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/cswithlocks/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/BaseAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/BaseAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/RunTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/RunTransactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/TransferAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/accounts_exercise/TransferAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/AgentOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/AgentOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/AgentTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/AgentTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/MyObservedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/MyObservedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/MyObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/MyObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/TestObsPatternDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_obs/TestObsPatternDeadlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/TestDeadlockedResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/TestDeadlockedResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/ThreadA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/ThreadA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/ThreadB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab03/liveness/deadlock_simplest/ThreadB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/CounterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/Flag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/TestCounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono1_basic/TestCounting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/CounterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Flag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/Flag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/TestCounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui/chrono2_strict/TestCounting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui1_unresponsive/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui1_unresponsive/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui1_unresponsive/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui1_unresponsive/MyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/MyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/TestGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui2_mvc_unresponsive/TestGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/MyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/TestGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui3_mvc_deadlock/TestGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/MyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/TestGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/gui4_mvc_nodeadlock/TestGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/MyWorkerC.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/MyWorkerC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/TestCSWithSem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/TestCSWithSem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/Pinger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/Pinger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/Ponger.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/Ponger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/TestPingPong.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab04/sem/ex/TestPingPong.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +70,8 @@
     "Gradle.pcd-2023-2024:app [:app:ConcurrentSortGeneral.main()].executor": "Run",
     "Gradle.pcd-2023-2024:app [:app:ConcurrentSortTwoThreads.main()].executor": "Run",
     "Gradle.pcd-2023-2024:app [:app:Main.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:RunTrafficSimulation.main()].executor": "Run",
+    "Gradle.pcd-2023-2024:app [:app:RunTrafficSimulationMassiveTest.main()].executor": "Run",
     "Gradle.pcd-2023-2024:app [:app:RunTransactions.main()].executor": "Run",
     "Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor": "Run",
     "Gradle.pcd-2023-2024:app [:app:TestCSWithLocks.main()].executor": "Run",
@@ -205,7 +97,35 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TestPingPong">
+  <component name="RunManager" selected="Application.RunTrafficSimulationMassiveTest">
+    <configuration name="RunTrafficSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.ass01.simtrafficexamples.RunTrafficSimulation" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.ass01.simtrafficexamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="RunTrafficSimulationMassiveTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.ass01.simtrafficexamples.RunTrafficSimulationMassiveTest" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.ass01.simtrafficexamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration name="RunTransactions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pcd.lab03.liveness.accounts_exercise.RunTransactions" />
       <module name="pcd-2023-2024.app.main" />
@@ -226,34 +146,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pcd.lab03.cswithlocks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TestCheckAndAct" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab02.check_act.TestCheckAndAct" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab02.check_act.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TestLostUpdates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab02.lost_updates.TestLostUpdates" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab02.lost_updates.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -378,11 +270,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunTrafficSimulationMassiveTest" />
+        <item itemvalue="Application.RunTrafficSimulation" />
         <item itemvalue="Application.TestPingPong" />
         <item itemvalue="Application.RunTransactions" />
         <item itemvalue="Application.TestCSWithLocks" />
-        <item itemvalue="Application.TestCheckAndAct" />
-        <item itemvalue="Application.TestLostUpdates" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +305,8 @@
       <workItem from="1710167778490" duration="231000" />
       <workItem from="1710168241900" duration="138000" />
       <workItem from="1710171733426" duration="137000" />
-      <workItem from="1710767297134" duration="1639000" />
+      <workItem from="1710767297134" duration="2435000" />
+      <workItem from="1710771369296" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start project">
       <option name="closed" value="true" />
@@ -439,7 +332,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709556118715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add lab4">
+      <option name="closed" value="true" />
+      <created>1710769880095</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710769880095</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: pingPong synch">
+      <option name="closed" value="true" />
+      <created>1710769890682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710769890682</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +359,9 @@
     <MESSAGE value="feat: print n° processor" />
     <MESSAGE value="feat: build" />
     <MESSAGE value="feat: merge with main" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: merge with main" />
+    <MESSAGE value="feat: add lab4" />
+    <MESSAGE value="feat: pingPong synch" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: pingPong synch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
