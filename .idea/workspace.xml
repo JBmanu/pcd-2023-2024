@@ -8,33 +8,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: pingPong synch">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/checksums/checksums.lock" afterDir="false" />
+    <list default="true" id="8bab56be-efa1-448c-a99c-473288f13a9e" name="Changes" comment="feat: FakeBarrier">
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgent.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgentBasic$CarAgentState.class.uniqueId10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgentBasic.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgentExtended$CarAgentState.class.uniqueId11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgentExtended.class.uniqueId14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarAgentInfo.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/CarPercept.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/RoadSimStatistics.class.uniqueId12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/RoadSimView$RoadSimViewPanel.class.uniqueId15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/RoadSimView.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/RoadsEnv.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TrafficSimulationSingleRoadMassiveNumberOfCars.class.uniqueId9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TrafficSimulationSingleRoadSeveralCars.class.uniqueId13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TrafficSimulationSingleRoadTwoCars.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TrafficSimulationSingleRoadWithTrafficLightTwoCars.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TrafficSimulationWithCrossRoads.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/FakeBarrier.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/SynchCell2.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TestBarrier.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/SynchCell2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/SynchCell2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/ex_barrier/FakeBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/ex_barrier/FakeBarrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/mvc/version2_deadlock/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/mvc/version2_deadlock/MyView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,71 +79,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RunTransactions.executor": "Debug",
-    "Gradle.pcd-2023-2024:app [:app:ConcurrentSortGeneral.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:ConcurrentSortTwoThreads.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:Main.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:RunTrafficSimulation.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:RunTrafficSimulationMassiveTest.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:RunTransactions.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestBarrier.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestCS.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestCSWithLocks.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestCSWithRawSynchBlocks.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestCheckAndAct.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestLostUpdates.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestPingPong.main()].executor": "Run",
-    "Gradle.pcd-2023-2024:app [:app:TestSynchCell.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "manu",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/manuelbuizo/Desktop/uni/PCD/pcd-2023-2024",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RunTransactions.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:ConcurrentSortGeneral.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:ConcurrentSortTwoThreads.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:RunTrafficSimulation.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:RunTrafficSimulationMassiveTest.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:RunTransactions.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestBarrier.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestCS.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestCSWithLocks.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestCSWithRawSynchBlocks.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestCheckAndAct.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestGUI.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestLostUpdates.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestPingPong.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:TestSynchCell.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;manu&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/manuelbuizo/Desktop/uni/PCD/pcd-2023-2024&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.TestBarrier">
-    <configuration name="RunTrafficSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.ass01.simtrafficexamples.RunTrafficSimulation" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.ass01.simtrafficexamples.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="RunTrafficSimulationMassiveTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.ass01.simtrafficexamples.RunTrafficSimulationMassiveTest" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.ass01.simtrafficexamples.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
+}</component>
+  <component name="RunManager" selected="Application.TestCS">
     <configuration name="TestBarrier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pcd.lab05.monitors.ex_barrier.TestBarrier" />
       <module name="pcd-2023-2024.app.main" />
@@ -183,12 +145,40 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version1_unresponsive.TestGUI" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab05.mvc.version1_unresponsive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration name="TestSynchCell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pcd.lab05.monitors.TestSynchCell" />
       <module name="pcd-2023-2024.app.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pcd.lab05.monitors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="pcd.lab05.mvc.version3_good.TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version3_good.TestGUI" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab05.mvc.version3_good.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.pcd.lab05.mvc.version3_good.TestGUI" />
+        <item itemvalue="Application.TestGUI" />
         <item itemvalue="Application.TestBarrier" />
         <item itemvalue="Application.TestSynchCell" />
         <item itemvalue="Application.TestCS" />
-        <item itemvalue="Application.RunTrafficSimulationMassiveTest" />
-        <item itemvalue="Application.RunTrafficSimulation" />
       </list>
     </recent_temporary>
   </component>
@@ -336,6 +326,7 @@
       <workItem from="1710171733426" duration="137000" />
       <workItem from="1710767297134" duration="2435000" />
       <workItem from="1710771369296" duration="1985000" />
+      <workItem from="1711384104835" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start project">
       <option name="closed" value="true" />
@@ -377,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710769890682</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: FakeBarrier">
+      <option name="closed" value="true" />
+      <created>1711371723362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371723362</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +389,8 @@
     <MESSAGE value="feat: merge with main" />
     <MESSAGE value="feat: add lab4" />
     <MESSAGE value="feat: pingPong synch" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: pingPong synch" />
+    <MESSAGE value="feat: FakeBarrier" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: FakeBarrier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

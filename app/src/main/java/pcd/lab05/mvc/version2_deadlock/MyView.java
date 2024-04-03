@@ -69,6 +69,9 @@ class MyView extends JFrame implements ActionListener, ModelObserver {
 			// state.setText("state: " + model.getState());
 			
 			/* no more races but deadlock */
+			// il thread del controller aspetta che lui faccia qualcosa
+			// lo stesso thread deve sbloccarsi
+			
 			SwingUtilities.invokeAndWait(() -> {
                 this.state.setText("state: " + model.getState());
 			});			
