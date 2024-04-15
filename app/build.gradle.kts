@@ -8,7 +8,6 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
-    java
 }
 
 repositories {
@@ -18,27 +17,28 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-//    testImplementation(libs.junit.jupiter)
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.0")
+    testImplementation(libs.junit.jupiter)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
-//    implementation(libs.guava)
-    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation(libs.guava)
+    implementation("io.vertx:vertx-core:4.5.7")
+    implementation("io.vertx:vertx-web:4.5.7")
+    implementation("io.vertx:vertx-web-client:4.5.7")
+       
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 application {
     // Define the main class for the application.
-//    mainClass = "org.example.App"
-    mainClass.set("org.example.App")
-
+    mainClass = "org.example.App"
 }
 
 tasks.named<Test>("test") {
