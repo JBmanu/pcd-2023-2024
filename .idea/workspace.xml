@@ -15,15 +15,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/FakeBarrier.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/SynchCell2.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TestBarrier.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/MyView$1.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/MyView.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/SequentialSort.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/TestGUI.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/ex_barrier/FakeBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/monitors/ex_barrier/FakeBarrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/mvc/version2_deadlock/MyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab05/mvc/version2_deadlock/MyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab07/vertx/Step1_basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab07/vertx/Step1_basic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/pcd/lab07/vertx/Step2_withverticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/pcd/lab07/vertx/Step2_withverticle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +89,8 @@
     &quot;Gradle.pcd-2023-2024:app [:app:RunTrafficSimulationMassiveTest.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.pcd-2023-2024:app [:app:RunTransactions.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.pcd-2023-2024:app [:app:SequentialSort.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:Step1_basic.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.pcd-2023-2024:app [:app:Step2_withverticle.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.pcd-2023-2024:app [:app:TestBarrier.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.pcd-2023-2024:app [:app:TestCS.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.pcd-2023-2024:app [:app:TestCSWithLocks.main()].executor&quot;: &quot;Run&quot;,
@@ -116,77 +118,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestCS">
-    <configuration name="TestBarrier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab05.monitors.ex_barrier.TestBarrier" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab05.monitors.ex_barrier.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TestCS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab05.jpf_examples.TestCS" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab05.jpf_examples.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version1_unresponsive.TestGUI" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab05.mvc.version1_unresponsive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TestSynchCell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab05.monitors.TestSynchCell" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab05.monitors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="pcd.lab05.mvc.version3_good.TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version3_good.TestGUI" />
-      <module name="pcd-2023-2024.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pcd.lab05.mvc.version3_good.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Step1_basic">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="build" />
       <option name="ENV_FILES" value="" />
@@ -207,21 +139,6 @@
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="build" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="build" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="build" />
@@ -287,20 +204,106 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <configuration name="Step1_basic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab07.vertx.Step1_basic" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab07.vertx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="Step2_withverticle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab07.vertx.Step2_withverticle" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab07.vertx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="TestBarrier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab05.monitors.ex_barrier.TestBarrier" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab05.monitors.ex_barrier.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version1_unresponsive.TestGUI" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab05.mvc.version1_unresponsive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="pcd.lab05.mvc.version3_good.TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pcd.lab05.mvc.version3_good.TestGUI" />
+      <module name="pcd-2023-2024.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pcd.lab05.mvc.version3_good.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="build" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="build" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.pcd.lab05.mvc.version3_good.TestGUI" />
         <item itemvalue="Application.TestGUI" />
         <item itemvalue="Application.TestBarrier" />
-        <item itemvalue="Application.TestSynchCell" />
-        <item itemvalue="Application.TestCS" />
+        <item itemvalue="Application.Step2_withverticle" />
+        <item itemvalue="Application.Step1_basic" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -327,6 +330,13 @@
       <workItem from="1710767297134" duration="2435000" />
       <workItem from="1710771369296" duration="1985000" />
       <workItem from="1711384104835" duration="599000" />
+      <workItem from="1713187452093" duration="628000" />
+      <workItem from="1713189319681" duration="430000" />
+      <workItem from="1713195064953" duration="3033000" />
+      <workItem from="1713623506114" duration="1208000" />
+      <workItem from="1713627828235" duration="599000" />
+      <workItem from="1713631787904" duration="599000" />
+      <workItem from="1713633768953" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start project">
       <option name="closed" value="true" />
@@ -390,7 +400,8 @@
     <MESSAGE value="feat: add lab4" />
     <MESSAGE value="feat: pingPong synch" />
     <MESSAGE value="feat: FakeBarrier" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: FakeBarrier" />
+    <MESSAGE value="feat: merge lab07" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: merge lab07" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
